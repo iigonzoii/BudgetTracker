@@ -1,4 +1,5 @@
 // Heavily relying and sourcing a majority of my code from the mini project in week 17 nosql to complete this homework!!
+// webmanifest sourced from activity 8 week 18 instructor demo
 
 
 let db;
