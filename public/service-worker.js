@@ -11,6 +11,7 @@ const FILES_TO_CACHE = [
   "/style.css",
   "/icons/icon-192x192.png",
   "/icons/icon-512x512.png",
+  "/service-worker.js"
 
 ];
 
@@ -19,7 +20,7 @@ self.addEventListener("install", function (evt) {
   // pre cache image data
   evt.waitUntil(
     //   Below line was edited because activity 13 was not passing files_to_cache
-    caches.open(DATA_CACHE_NAME).then((cache) => cache.add(FILES_TO_CACHE))
+    caches.open(CACHE_NAME).then((cache) => cache.add(FILES_TO_CACHE))
   );
     
   // pre cache all static assets
