@@ -18,14 +18,17 @@ const FILES_TO_CACHE = [
 // install
 self.addEventListener("install", function (evt) {
   // pre cache image data
-  evt.waitUntil(
-    //   Below line was edited because activity 13 was not passing files_to_cache
-    caches.open(CACHE_NAME).then((cache) => cache.add(FILES_TO_CACHE))
-  );
+  // evt.waitUntil(
+  //   //   Below line was edited because activity 13 was not passing files_to_cache
+  //   // caches.open(CACHE_NAME).then((cache) => cache.add(FILES_TO_CACHE))
+  // );
     
   // pre cache all static assets
   evt.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(FILES_TO_CACHE))
+    caches.open(CACHE_NAME).then((cache) => 
+      
+       cache.addAll(FILES_TO_CACHE)
+    )
   );
 
   // tell the browser to activate this service worker immediately once it
